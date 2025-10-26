@@ -37,6 +37,30 @@ const proxyServices = {
         format: (targetUrl) => {
             return `https://www.proxysite.com/online/?title=Testing&u=${encodeURIComponent(targetUrl)}`;
         }
+    },
+    
+    allorigins: {
+        name: "AllOrigins (Working)",
+        url: "https://api.allorigins.win/",
+        format: (targetUrl) => {
+            return `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
+        }
+    },
+    
+    corsproxy: {
+        name: "CorsProxy (Alternative)",
+        url: "https://corsproxy.io/",
+        format: (targetUrl) => {
+            return `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`;
+        }
+    },
+    
+    corsanywhere: {
+        name: "CorsAnywhere",
+        url: "https://cors-anywhere.herokuapp.com/",
+        format: (targetUrl) => {
+            return `https://cors-anywhere.herokuapp.com/${targetUrl}`;
+        }
     }
 };
 
