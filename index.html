@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Research Portal</h1>
+        <p>Authorized access tool for security testing</p>
+        
+        <div class="button-group">
+            <button id="directAccess" class="btn primary">Access Research Tool</button>
+            <button id="customProxy" class="btn secondary">Custom Proxy Access</button>
+        </div>
+
+        <div class="proxy-form" id="proxyForm" style="display: none;">
+            <input type="text" id="proxyUrl" placeholder="https://your-proxy.com/" />
+            <button id="useCustomProxy" class="btn">Use This Proxy</button>
+        </div>
+
+        <div class="status" id="status"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

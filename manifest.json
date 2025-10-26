@@ -1,0 +1,16 @@
+{
+  "name": "Research Assistant",
+  "short_name": "Research",
+  "description": "Authorized research and testing tool",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4285f4",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iMjQiIGZpbGw9IiM0Mjg1RjQiLz4KPHN2ZyB4PSI1NiIgeT0iNTYiIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik0xMiAxOGE2IDYgMCAwIDAgNi02YTcgNyAwIDAgMC03LTdjLTEgMC0xLjczIDAtMi4yLjA5QTUuNSA1LjUgMCAwIDAgOCAxNS41YTUuNSA1LjUgMCAwIDAgNS41IDUuNVoiLz4KPHN2ZyB4PSIxMSIgeT0iMTEiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiPgo8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIyIi8+Cjwvc3ZnPgo8L3N2Zz4K",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}
