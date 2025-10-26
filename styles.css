@@ -8,95 +8,212 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 20px;
+    line-height: 1.6;
 }
 
 .container {
+    max-width: 800px;
+    margin: 0 auto;
     background: white;
     border-radius: 12px;
-    padding: 40px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    max-width: 500px;
-    width: 100%;
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 30px;
     text-align: center;
 }
 
-h1 {
-    color: #333;
-    margin-bottom: 10px;
+header h1 {
     font-size: 2.2em;
+    margin-bottom: 10px;
 }
 
-p {
-    color: #666;
-    margin-bottom: 30px;
+header p {
+    opacity: 0.9;
     font-size: 1.1em;
 }
 
-.button-group {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 25px;
+main {
+    padding: 30px;
 }
 
-.btn {
-    padding: 15px 25px;
-    border: none;
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* URL Input Section */
+.url-input-section {
+    background: #f8f9fa;
+    padding: 25px;
     border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#siteUrl {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#siteUrl:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+#proxyButton {
+    padding: 12px 25px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 6px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
+    transition: background 0.3s;
 }
 
-.btn.primary {
-    background: #4285f4;
+#proxyButton:hover {
+    background: #219a52;
+}
+
+.proxy-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.proxy-options label {
+    font-weight: 600;
+    color: #555;
+}
+
+#proxyService {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+}
+
+/* Quick Access Section */
+.quick-access h2 {
+    text-align: center;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+}
+
+.quick-btn {
+    padding: 15px 10px;
+    background: #3498db;
     color: white;
-}
-
-.btn.primary:hover {
-    background: #3367d6;
-    transform: translateY(-2px);
-}
-
-.btn.secondary {
-    background: #f1f3f4;
-    color: #333;
-}
-
-.btn.secondary:hover {
-    background: #e8eaed;
-    transform: translateY(-2px);
-}
-
-.proxy-form {
-    margin: 20px 0;
-}
-
-.proxy-form input {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #e8eaed;
-    border-radius: 8px;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.status {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    background: #f8f9fa;
-    color: #666;
+    border: none;
+    border-radius: 6px;
     font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
-.hidden {
-    display: none;
+.quick-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Status Section */
+.status-box {
+    background: #e8f4fd;
+    border: 1px solid #b3d9f7;
+    border-radius: 6px;
+    padding: 15px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.status-box.error {
+    background: #fde8e8;
+    border-color: #f7b3b3;
+    color: #c0392b;
+}
+
+.status-box.success {
+    background: #e8f7e8;
+    border-color: #b3f7b3;
+    color: #27ae60;
+}
+
+/* Instructions */
+.instructions {
+    background: #fff9e6;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #ffeaa7;
+}
+
+.instructions ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.instructions li {
+    margin-bottom: 8px;
+}
+
+.instructions p {
+    color: #e67e22;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .button-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    header {
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 1.8em;
+    }
 }
